@@ -1,2 +1,48 @@
-# Template-NodensApp
-Template for creating a Nodens-based application.
+# Nodens Application Template
+
+A minimal C++23 application template using [Nodens](https://github.com/EldritchCodex/Nodens).
+
+> ⚠️ The published development environment currently builds and validates Nodens applications for Linux only. Native Windows and macOS builds are not currently supported or validated.
+
+## Prerequisites
+
+Install Docker and an editor with Dev Container support:
+
+- [Zed](https://zed.dev/)
+- [Visual Studio Code](https://code.visualstudio.com/) with the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+
+This template uses the published development image:
+
+```text
+ghcr.io/eldritchcodex/nodens-devcontainer:dev
+```
+
+## Getting Started
+
+1. Create a repository from this template or clone it locally.
+2. Open the project folder in Zed or Visual Studio Code.
+3. Choose **Reopen in Container** or the equivalent Dev Container action.
+4. Open a terminal inside the container.
+5. Configure, build, and run the application:
+
+   ```shell
+   cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug
+   cmake --build build --target NodensApp
+   ./build/NodensApp
+   ```
+
+The first CMake configuration downloads Nodens and its dependencies with `FetchContent`. You do not need to clone or build the Nodens repository separately.
+
+For reproducible builds, replace `GIT_TAG dev` in `CMakeLists.txt` with a specific Nodens commit hash. The `dev` branch tracks ongoing development and may change without notice.
+
+## Project Layout
+
+```text
+.
+├── .devcontainer/
+│   └── devcontainer.json
+├── CMakeLists.txt
+├── LICENSE
+├── main.cpp
+└── README.md
+```

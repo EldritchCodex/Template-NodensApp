@@ -1,0 +1,5 @@
+{
+    "name": "Nodens Application",
+    "image": "ghcr.io/eldritchcodex/nodens-devcontainer:dev",
+    "remoteUser": "eldritchcodex"
+}
