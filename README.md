@@ -34,15 +34,3 @@ ghcr.io/eldritchcodex/nodens-devcontainer:dev
 The first CMake configuration downloads Nodens and its dependencies with `FetchContent`. You do not need to clone or build the Nodens repository separately.
 
 For reproducible builds, replace `GIT_TAG dev` in `CMakeLists.txt` with a specific Nodens commit hash. The `dev` branch tracks ongoing development and may change without notice.
-
-## Project Layout
-
-```text
-.
-├── .devcontainer/
-│   └── devcontainer.json
-├── CMakeLists.txt
-├── LICENSE
-├── main.cpp
-└── README.md
-```
