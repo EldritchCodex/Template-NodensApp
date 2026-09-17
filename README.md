@@ -11,11 +11,19 @@ Install Docker and an editor with Dev Container support:
 - [Zed](https://zed.dev/)
 - [Visual Studio Code](https://code.visualstudio.com/) with the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
-This template uses the published development image:
+This template uses the published Linux graphics image:
 
 ```text
-ghcr.io/eldritchcodex/nodens-devcontainer:dev
+ghcr.io/eldritchcodex/linux-graphics-dev:main
 ```
+
+The included `.devcontainer/devcontainer.json` uses NVIDIA by default with
+`--gpus=all`. NVIDIA hosts need a working host driver and NVIDIA Container
+Toolkit configured in Docker. See the [NVIDIA Container Toolkit installation
+guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
+
+For Intel/AMD, comment the NVIDIA `runArgs` and uncomment the `/dev/dri`,
+`video`, and `render` arguments. Keep exactly one `runArgs` block active.
 
 ## Getting Started
 
