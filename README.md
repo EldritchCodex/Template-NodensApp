@@ -14,7 +14,7 @@ Install Docker and an editor with Dev Container support:
 This template uses the published Linux graphics image:
 
 ```text
-ghcr.io/eldritchcodex/linux-graphics-dev:main
+ghcr.io/eldritchcodex/arch-dev:main
 ```
 
 The included `.devcontainer/devcontainer.json` uses NVIDIA by default with
